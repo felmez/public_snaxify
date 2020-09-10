@@ -1,0 +1,22 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle *ngIf="loggedIn">
+			<ion-icon name="liliom-menu2" class="not-flipped"></ion-icon>
+		</button>
+		<ion-title>{{ 'completed.title' | translate }}</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding>
+	<div class="middle-center">
+		<div class="container">
+			<img src="assets/img/box-animated-1.svg">
+			<h2 class="title">{{ 'completed.order_received_successfully' | translate }}!</h2>
+			<p class="order-message">
+				{{ 'completed.good_news_dear_friend' | translate }}
+			</p>
+			<p class="order-number">
+				{{ 'completed.order_number' | translate }}: <span>#{{ order.id }}</span>
+			</p>
+		</div>
+	</div>
+</ion-content>

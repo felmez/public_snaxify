@@ -1,0 +1,91 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle *ngIf="loggedIn">
+			<ion-icon name="liliom-menu2" class="not-flipped"></ion-icon>
+		</button>
+		<ion-title>{{ 'order.title' | translate }}</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding>
+	<form *ngIf="formReady" [formGroup]="orderForm" novalidate>
+		<ion-list no-lines>
+			<!--<ion-list-header>
+				{{ 'order.contact_information' | translate }}
+			</ion-list-header>-->
+			<ion-item>
+				<ion-label fixed>{{ 'order.name' | translate }}</ion-label>
+				<ion-input placeholder="{{ 'order.click_to_write' | translate }}" type="text"
+					[formControl]="orderForm.controls.name"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label fixed>{{ 'order.phone' | translate }}</ion-label>
+				<ion-input placeholder="{{ 'order.click_to_write' | translate }}" type="text"
+					[formControl]="orderForm.controls.phone"></ion-input>
+			</ion-item>
+			<!-- Text input Style FIXME: -->
+			<ion-item>
+				<ion-label fixed>{{ 'order.address' | translate }}</ion-label>
+				<ion-input placeholder="{{ 'order.click_to_write' | translate }}" type="text"
+					[formControl]="orderForm.controls.address"></ion-input>
+			</ion-item>
+			<!-- Address Map Syle TODO: -->
+			<button type="button" ion-item detail-none (click)="showAddressWindow()">
+				<ion-label fixed>{{ 'order.address' | translate }}</ion-label>
+				<ion-input disabled placeholder="{{ 'order.click_to_write' | translate }}" type="text"
+					[formControl]="orderForm.controls.address"></ion-input>
+			</button>
+		</ion-list>
+		<!--<ion-item>
+			<ion-label fixed>{{ 'order.promo_code' | translate }}</ion-label>
+			<ion-input placeholder="{{ 'order.optional' | translate }}" type="text"
+			           [formControl]="orderForm.controls.promo_code"></ion-input>
+			<button ion-button item-right type="button" (click)="validatePromo()">{{ 'order.check_promo' | translate }}
+			</button>
+		</ion-item>-->
+
+
+		<!--<ion-list-header>
+			{{ 'order.payment_methods' | translate }}
+		</ion-list-header>-->
+
+		<ion-slides [dir]="direction" slidesPerView="1.8" spaceBetween="20" (ionSlideDidChange)="slideChanged()">
+			<ion-slide *ngFor="let method of paymentMethods">
+				<ion-icon [class]="'liliom-' + method.icon + ' not-flipped'"></ion-icon>
+				<!--<div class="cart-product-img" [ngStyle]="{'background-image': 'url(' +item.product.images[0] + ')'}"></div>-->
+				<h2>{{ method.name | translate }}</h2>
+			</ion-slide>
+		</ion-slides>
+
+		<ion-list no-lines>
+			<!--<ion-list-header>
+				{{ 'order.order_value' | translate }}
+			</ion-list-header>-->
+			<ion-item>
+				<h2>{{ 'order.delivery_price' | translate }}</h2>
+				<ion-note item-end>{{ deliveryPrice | ecurrency }}</ion-note>
+			</ion-item>
+			<ion-item>
+				<h2>{{ 'order.total' | translate }}</h2>
+				<ion-note item-end>{{ cTotalPrice + deliveryPrice | ecurrency }}</ion-note>
+			</ion-item>
+			<ion-item *ngIf="discountPrice">
+				<h2>{{ 'order.coupon_discount' | translate }}</h2>
+				<ion-note item-end>{{ cFullPrice - discountPrice | ecurrency }}</ion-note>
+			</ion-item>
+			<ion-item *ngIf="cTaxPrice > 0">
+				<h2>{{ 'order.tax' | translate }}</h2>
+				<ion-note item-end>{{ cTaxPrice | ecurrency }}</ion-note>
+			</ion-item>
+			<ion-item *ngIf="cTaxPrice > 0">
+				<h2>{{ 'order.total_with_tax' | translate }}</h2>
+				<ion-note item-end>{{ cPriceWithTax | ecurrency }}</ion-note>
+			</ion-item>
+		</ion-list>
+	</form>
+</ion-content>
+<ion-footer padding>
+	<button ion-button block class="place-order-button call-to-action" [disabled]="!orderForm.valid"
+		(click)="placeOrder(orderForm.value)">
+		{{ 'order.complete_payment_process' | translate }}
+	</button>
+</ion-footer>

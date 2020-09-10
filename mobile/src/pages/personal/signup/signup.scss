@@ -1,0 +1,18 @@
+page-signup, page-login {
+  .content {
+  }
+  .login-links {
+    text-align: center;
+    padding: 40px 0 20px 0;
+    a {
+      color: #fdcc52;
+    }
+  }
+  .scroll-content {
+    display: flex;
+    align-items: center;
+    .wrap {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+completed {
+  .container {
+    text-align: center;
+    img {
+      width: 128px;
+      height: 128px;
+      margin: 0 auto;
+      display: block;
+    }
+    .title {
+      text-align: center;
+      letter-spacing: 0;
+      font-size: 22px;
+      font-weight: bold;
+      color: color($colors, dark);
+      line-height: 22px;
+    }
+    .order-message, .order-number {
+      font-size: 15px;
+      //font-weight: bold;
+      color: color($colors, light);
+      line-height: 20px;
+    }
+    .order-message {
+
+    }
+    .order-number span {
+      color: color($colors, primary);
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<ion-tabs>
+	<ion-tab [root]="tabHomePage" tabTitle="{{ 'tabs.home' | translate }} " tabIcon="liliom-home"></ion-tab>
+	<!-- <ion-tab [root]="tabCategoriesPage" tabTitle="{{ 'tabs.menu' | translate }} " tabIcon="liliom-grid"></ion-tab> -->
+	<ion-tab [root]="tabCartPage" tabTitle="{{ 'tabs.cart' | translate }}" tabIcon="liliom-cart" tabBadge="{{ count > 0 ? count : '' }}"></ion-tab>
+</ion-tabs>

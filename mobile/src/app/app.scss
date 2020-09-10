@@ -1,0 +1,126 @@
+// http://ionicframework.com/docs/v2/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+// FIXME: removed for white space
+// ion-header {
+//   padding-top: 10px;
+// }
+.product-price {
+  line-height: 50px;
+  font-size: 30px;
+}
+
+.product-count {
+  line-height: 50px;
+  font-size: 23px;
+}
+
+.product-info {
+  // margin: 0 -10px;
+}
+
+.product-info, .product-info * {
+  // color: #fff !important;
+}
+
+.cart {
+  .cart-product {
+    position: relative;
+    overflow: hidden;
+    img {
+      width: auto !important;
+      max-width: initial;
+      height: 100% !important;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+// Parallax Header
+ion-content {
+  /*.fixed-content {
+    display: none !important;
+    margin: 0 !important;
+  }
+  .scroll-content {
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+  }*/
+  &[parallax-header] {
+
+  }
+  .header-image {
+    height: 40vh;
+    top: -2px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0 !important;
+    right: 0 !important;
+  }
+  .main-content {
+    top: 45vh;
+    padding: 17px;
+    left: 0 !important;
+    right: 0 !important;
+    &.overlay {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: calc(28vh + 20px);
+        width: 100%;
+        height: 10vh;
+        background-image: linear-gradient(0deg, $white 17%, rgba($white, 0.32) 85%, rgba($white, 0.00) 100%);
+      }
+    }
+  }
+
+  .scroll-content, .main-content {
+    background-color: $white !important;
+  }
+}
+
+ion-menu {
+  .app-version {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+  }
+}
+
+.scroll-content {
+}
+
+.middle-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  > div {
+    display: block;
+    /** {
+
+    }*/
+  }
+}
+
+// Components:
+

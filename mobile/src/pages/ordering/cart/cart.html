@@ -1,0 +1,105 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle *ngIf="loggedIn">
+			<ion-icon name="liliom-menu2" class="not-flipped"></ion-icon>
+		</button>
+		<ion-title>
+			<div *ngIf="items.length == 0">
+				{{ 'cart.empty' | translate }}
+			</div>
+			<div *ngIf="items.length > 0">
+				{{ 'cart.title' | translate }}
+				<!-- {{cart.getCartCount()}} -->
+				<!-- <span *ngIf="cart.getCartCount() == 1">
+			{{ 'cart.product' | translate }}
+			</span>
+				<span *ngIf="cart.getCartCount() > 1">
+			{{ 'cart.products' | translate }}
+			</span> -->
+			</div>
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="products-content">
+	<div *ngIf="items.length == 0; else gotProducts" class="middle-center">
+		<div>
+			{{ 'cart.empty' | translate }}
+		</div>
+	</div>
+	<ng-template #gotProducts>
+		<ion-slides [dir]="direction" slidesPerView="1.8" spaceBetween="30">
+			<ion-slide *ngFor="let item of items">
+				<div class="cart-product-img" *ngIf="item.product.images.length > 0"
+				     [ngStyle]="{'background-image': 'url(' +item.product.images[0] + ')'}">
+				</div>
+				<div class="cart-product-details">
+					<h2>{{ item.product.name }}</h2>
+					<span class="price">{{ item.product.price  | ecurrency }}</span>
+					<div class="count">
+						<b class="multiply">&nbsp;x&nbsp;</b>
+						{{ item.count }}
+					</div>
+					<div class="count-manipulation">
+						<button class="decrease" (click)="decreaseCart(item)">-</button>
+						<button class="increase" (click)="increaseCart(item)">+</button>
+					</div>
+				</div>
+			</ion-slide>
+		</ion-slides>
+		<ion-list no-lines>
+			<ion-item>
+				<h2>{{ 'cart.subtotal' | translate }}:</h2>
+				<ion-note item-end>{{ cartPrice() | ecurrency }}</ion-note>
+			</ion-item>
+			<ion-item>
+				<h2>{{ 'cart.delivery_price' | translate }}:</h2>
+				<ion-note item-end>{{ 0 | ecurrency }}</ion-note>
+			</ion-item>
+			<ion-item>
+				<h2>{{ 'order.tax' | translate }}:</h2>
+				<ion-note item-end>{{ cartTax() | ecurrency }}</ion-note>
+			</ion-item>
+		</ion-list>
+		<hr>
+		<ion-list no-lines>
+			<ion-item>
+				<h2>{{ 'order.total_with_tax' | translate }}:</h2>
+				<ion-note item-end>{{ cartWithTax() | ecurrency }}</ion-note>
+			</ion-item>
+		</ion-list>
+	</ng-template>
+	<!--<div class="product" *ngFor="let item of items">
+		<div *ngIf="item.product.images.length > 0" class="product-images">
+			<img [src]="item.product.images[0]">
+		</div>
+		<div padding class="product-info">
+			<h2>{{ item.product.name }}</h2>
+			<p class="product-descr">{{ item.product.description }}</p>
+			<div class="product-price">
+				<span *ngIf="item.product.price_old && (item.product.price_old > 0)"><s>{{ item.product.price_old }}</s></span>
+				<span>{{ item.product.price  | ecurrency }} x {{item.count }} = {{ item.product.price * item.count | ecurrency }}</span>
+			</div>
+			<ion-row no-padding>
+				<ion-col>
+					<button ion-button block outline color="light" icon-left (click)="decreaseCart(item)">
+						-
+					</button>
+				</ion-col>
+				<ion-col class="text-center product-count">
+					{{ item.count }}
+				</ion-col>
+				<ion-col>
+					<button ion-button block outline color="light" icon-left (click)="increaseCart(item)">
+						+
+					</button>
+				</ion-col>
+			</ion-row>
+		</div>
+	</div>-->
+</ion-content>
+<ion-footer [hidden]="items.length == 0" padding>
+	<button type="button" ion-button block (click)="showOrderModal()" class="place-order-button call-to-action">
+		{{ 'cart.continue_to_payment' | translate }}
+	</button>
+</ion-footer>

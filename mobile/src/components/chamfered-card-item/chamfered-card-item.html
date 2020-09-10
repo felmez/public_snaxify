@@ -1,0 +1,11 @@
+<div class="card-img" *ngIf="image">
+	<img [src]="image">
+</div>
+<div class="card-content" text-wrap>
+	<h2 class="card-title">{{ title }}</h2>
+	<time class="card-sub-title" *ngIf="timestamp" [innerHtml]="timestamp"></time>
+	<div class="card-text" *ngIf="subTitle">
+		<p>{{ subTitle | truncate:[timestamp?25:50, '...'] }}</p>
+	</div>
+</div>
+<div class="card-badge" *ngIf="badge" [innerHtml]="badge"></div>

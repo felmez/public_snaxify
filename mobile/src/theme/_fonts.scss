@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Bukra';
+  src: url('../assets/fonts/bukra/29ltbukraregular.eot');
+  src: local('☺'), url('../assets/fonts/bukra/29ltbukraregular.woff') format('woff'), url('../assets/fonts/bukra/29ltbukraregular.ttf') format('truetype'), url('../assets/fonts/bukra/29ltbukraregular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bukra';
+  src: url('../assets/fonts/bukra/29ltbukrabold.eot');
+  src: local('☺'), url('../assets/fonts/bukra/29ltbukrabold.woff') format('woff'), url('../assets/fonts/bukra/29ltbukrabold.ttf') format('truetype'), url('../assets/fonts/bukra/29ltbukrabold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bukra';
+  src: url('../assets/fonts/bukra/29LTBukra-Light.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/bukra/29LTBukra-Light.woff') format('woff'),
+  url('../assets/fonts/bukra/29LTBukra-Light.ttf') format('truetype'),
+  url('../assets/fonts/bukra/29LTBukra-Light.svg#29LTBukra-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jannalt";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/jannalt/jannaltregular.eot?") format("eot");
+  src: url("../assets/fonts/jannalt/jannaltregular.eot?#iefix") format("embedded-opentype"),
+  url("../assets/fonts/jannalt/jannaltregular.woff") format("woff"),
+  url("../assets/fonts/jannalt/jannaltregular.ttf") format("truetype"),
+  url("../assets/fonts/jannalt/jannaltregular.svg#Jannaltbold") format("svg");
+}
+
+@font-face {
+  font-family: "Jannalt";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../assets/fonts/jannalt/jannaltbold.eot?") format("eot");
+  src: url("../assets/fonts/jannalt/jannaltbold.eot?#iefix") format("embedded-opentype"),
+  url("../assets/fonts/jannalt/jannaltbold.woff") format("woff"),
+  url("../assets/fonts/jannalt/jannaltbold.ttf") format("truetype"),
+  url("../assets/fonts/jannalt/jannaltbold.svg#Jannalt") format("svg");
+}

@@ -1,0 +1,31 @@
+.inline-form {
+  display: inline-block;
+}
+
+.product-image-table {
+  max-width: 70px;
+}
+
+.product-image-holder {
+  position: relative;
+}
+
+.product-image-delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+#delivery_area_map {
+  height: 500px;
+}

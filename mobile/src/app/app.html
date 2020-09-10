@@ -1,0 +1,31 @@
+<!-- <ion-split-pane> -->
+<ion-menu [content]="myNav" persistent="true" type="overlay" [hidden]="!loggedIn">
+	<ion-content>
+		<div>
+			<ion-list>
+				<button menuClose ion-item (click)="openProfile()" class="-b5">
+					{{ 'menu.profile' | translate }}
+				</button>
+				<button menuClose ion-item (click)="logout()" class="-b7">
+					{{ 'menu.logout' | translate }}
+				</button>
+			</ion-list>
+			<ion-grid class="app-version">
+				<ion-row align-items-end style="margin-top: auto;">
+					<hr width="100%">
+					<ion-col col text-center>
+						<span>{{ 'menu.version' | translate }} 2.0.0-beta</span>
+						<br>
+						<div>
+							{{ 'menu.powered_by' | translate }} &nbsp;<a style="color: #ffcc00;" href="https://skyrimcreative.com"><b>Skyrim Creative</b>
+						</a>
+						</div>
+
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+	</ion-content>
+</ion-menu>
+<ion-nav #myNav swipeBackEnabled="false" [root]="rootPage"></ion-nav>
+<!-- </ion-split-pane> -->

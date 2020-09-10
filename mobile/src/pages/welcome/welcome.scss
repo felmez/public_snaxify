@@ -1,0 +1,155 @@
+.welcome-page {
+  height: 100%;
+  video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .slider-wrapper {
+    height: 100%;
+    width: 100%;
+    ion-slides {
+      ion-slide {
+        .slide-zoom {
+          position: absolute;
+          top: 0px;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          .upper-part, .lower-part {
+            position: relative;
+            top: 0;
+            width: 100%;
+            padding: 0 15vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .upper-part {
+            height: 60vh;
+            background-color: color($colors, primary);
+            img {
+              width: 200px;
+            }
+          }
+          .lower-part {
+            height: 40vh;
+            background-color: $white;
+            .text-wrapper {
+              display: block;
+              h2 {
+                font-weight: bold;
+                font-size: 22px;
+              }
+              p {
+                color: color($colors, light);
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 24px;
+              }
+            }
+          }
+        }
+      }
+      .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 30px;
+        .swiper-pagination-bullet-active {
+          background-color: color($colors, primary);
+        }
+      }
+    }
+    .nav-btn {
+      position: fixed;
+      z-index: 10;
+      font-size: 13px;
+      padding: 0;
+      line-height: normal;
+      background: transparent;
+      &#prev-btn {
+        @include position(null, null, calc(1% + 25px), 25px);
+      }
+      &#next-btn {
+        @include position(null, 25px, calc(1% + 25px), null);
+      }
+      &#skip-btn {
+        @include position(calc(1% + 30px), null, null, 25px);
+        font-weight: bold;
+      }
+    }
+
+  }
+
+  .welcome-screen {
+    //background: url('../assets/welcome.jpg') center center no-repeat;
+    background: transparent !important;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    .start-button {
+      color: $white;
+      font-weight: normal;
+      text-transform: none;
+    }
+  }
+
+  .welcome-content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0 10px 40px 10px;
+    // button {
+    //   background: #C6C522;
+    //   color: #000;
+    //   width: 50%;
+    //   margin: 0 auto;
+    // }
+  }
+
+  .welcome-group {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    p {
+      text-align: center;
+      font-size: 27px;
+      color: #fff;
+      margin-bottom: 40px;
+    }
+  }
+
+  .welcome-icon {
+    display: none;
+    width: 70px;
+    height: 70px;
+    background: url('../assets/img/logo.png') center center no-repeat;
+    background-size: 22px 28px;
+    border: 2px solid #fff;
+    padding: 6px;
+    border-radius: 50%;
+    .inner {
+      display: inline-block;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      width: 54px;
+      height: 54px;
+    }
+  }
+
+  .welcome-text {
+    display: block;
+    padding-top: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    line-height: 40px;
+  }
+}

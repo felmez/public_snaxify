@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="30px" viewBox="0 0 46 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ui/rtl/Header" transform="translate(-666.000000, -50.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Header">
+                <path d="M668,50 L700,50 C701.104569,50 702,50.8954305 702,52 C702,53.1045695 701.104569,54 700,54 L668,54 C666.895431,54 666,53.1045695 666,52 C666,50.8954305 666.895431,50 668,50 Z M668.555556,63 L709.444444,63 C710.855839,63 712,63.8954305 712,65 C712,66.1045695 710.855839,67 709.444444,67 L668.555556,67 C667.144161,67 666,66.1045695 666,65 C666,63.8954305 667.144161,63 668.555556,63 Z M668,76 L700,76 C701.104569,76 702,76.8954305 702,78 C702,79.1045695 701.104569,80 700,80 L668,80 C666.895431,80 666,79.1045695 666,78 C666,76.8954305 666.895431,76 668,76 Z" id="icon-menu" transform="translate(689.000000, 65.000000) scale(-1, 1) translate(-689.000000, -65.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,34 @@
+<ion-content class="signup-page">
+	<!-- <div padding class="wrap">
+		<form (ngSubmit)="doLogin()" *ngIf="active" novalidate [formGroup]="loginForm" class="signup-form">
+			<ion-item>
+				<ion-input placeholder="{{ 'login.email' | translate }}" type="email" [formControl]="loginForm.controls.email">
+				</ion-input>
+			</ion-item>
+			<ion-item class="iconed-input">
+				<ion-input placeholder="{{ 'login.password' | translate }}" type="password"
+				           [formControl]="loginForm.controls.password">
+				</ion-input>
+			</ion-item>
+			<button ion-button type="submit" id="input_submit" block color="secondary" [disabled]="loginForm.invalid">
+				{{ 'login.button' | translate }}
+			</button>
+			<div class="login-links">
+				<a (click)="signup()">{{ 'login.no_account' | translate }}</a>
+			</div>
+		</form>
+	</div> -->
+
+	<ion-content padding>
+		<div id="recaptcha-container"></div>
+	  
+		<ion-item>
+		  <ion-label stacked>Phone Number</ion-label>
+		  <ion-input type="number" [(ngModel)]="phoneNumber"></ion-input>
+		</ion-item>
+	  
+		<button ion-button id="sign-in-button" (click)="signIn(phoneNumber)">
+		  Sign In
+		</button>
+	  </ion-content>
+</ion-content>

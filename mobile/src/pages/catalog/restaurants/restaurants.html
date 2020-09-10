@@ -1,0 +1,65 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle *ngIf="loggedIn">
+			<ion-icon name="liliom-menu2" class="not-flipped"></ion-icon>
+		</button>
+		<ion-title>
+			<span *ngIf="rootCategory">{{ rootCategory.name }}</span>
+			<span *ngIf="!rootCategory">{{ 'restaurants.title' | translate }}</span>
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- old style static restaurant card removed -->
+	<!-- <ion-card *ngFor="let item of items; let i = index;" (click)="showDetails(item)" tappable>
+		<img [src]="item.image_url">
+		<ion-card-content>
+			<ion-card-title>{{ item.name }}</ion-card-title>
+		</ion-card-content>
+	</ion-card> -->
+
+  <!-- new style dynamic restaurant card added -->
+	<ion-card class="place-card" *ngFor="let item of items; let i = index;" tappable (click)="showDetails(item)">
+    <img class="card-bg" [src]="item.image_url" />
+    <div class="card-overlay">
+      <div class="card-title">{{ item.name }}</div>
+      <div class="card-footer">
+        <div class="card-footer-delivery-box">
+          <div class="card-footer-delivery-img">
+            <img
+              src="https://snaxify.com/delivery.svg"
+              alt="Delivery"
+              width="32"
+              height="32"
+            />
+          </div>
+          <div class="card-footer-delivery-title">مجاني</div>
+        </div>
+        <div class="card-footer-rate-box">
+          <div class="card-footer-rate-img">
+            <img
+              src="https://snaxify.com/rate.svg"
+              alt="Rate"
+              width="32"
+              height="32"
+            />
+          </div>
+          <div class="card-footer-rate-title">100%</div>
+        </div>
+        <div class="card-footer-time-box">
+          <div class="card-footer-time-img">
+            <img
+              src="https://snaxify.com/time.svg"
+              alt="Time"
+              width="32"
+              height="32"
+            />
+          </div>
+          <div class="card-footer-time-title">30دقيقة</div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>

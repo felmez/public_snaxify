@@ -1,0 +1,58 @@
+<div class="welcome-page">
+	<video src="https://snaxify.com/kitchen.mp4" autoplay playsinline muted loop></video>
+
+	<div class="welcome-screen" [hidden]="!sliderEnded">
+			<div class="welcome-group">
+				<p class="text-center">
+					<span class="welcome-icon">
+						<span class="inner"></span>
+					</span>
+					<span class="welcome-text">
+						{{ 'welcome.welcome' | translate }}<br/>{{ 'welcome.app_name' | translate }}
+					</span>
+				</p>
+			</div>
+			<div class="welcome-content" *ngIf="!signup">
+				<button ion-button block large class="start-button" (click)="startApp()">{{ 'welcome.start' | translate }}
+				</button>
+			</div>
+			<div class="welcome-content" *ngIf="signup">
+				<button ion-button block large class="start-button" (click)="goToSignup()">{{ 'welcome.signup' | translate }}
+				</button>
+				<div class="text-center">
+					<a href="#" (click)="goToLogin()">{{ 'welcome.login' | translate }}</a>
+				</div>
+			</div>
+		</div>
+
+	<div class="slider-wrapper" [hidden]="sliderEnded">
+		<ion-slides pager [dir]="direction">
+			<ion-slide *ngFor="let slide of slides">
+				<div class="upper-part">
+					<img [src]="slide.icon">
+				</div>
+				<div class="lower-part">
+					<div class="text-wrapper">
+						<h2>{{ slide.title }}</h2>
+						<p>{{ slide.subTitle}}</p>
+					</div>
+				</div>
+			</ion-slide>
+		</ion-slides>
+		<button id="prev-btn" class="nav-btn btn-text-only" [disabled]="slidesElement.isBeginning()"
+		        (click)="previousSlide()">
+			{{ 'welcome.previous' | translate }}
+		</button>
+		<button id="next-btn" class="nav-btn btn-text-only" (click)="nextSlide()">
+		<span *ngIf="slidesElement.isEnd()">
+		{{ 'welcome.start_now' | translate }}
+		</span>
+			<span *ngIf="!slidesElement.isEnd()">
+		{{ 'welcome.next' | translate }}
+		</span>
+		</button>
+	</div>
+
+
+	
+</div>

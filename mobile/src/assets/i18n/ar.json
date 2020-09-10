@@ -1,0 +1,148 @@
+{
+  "welcome": {
+    "welcome": "سناكسفاي لطلب وتوصيل الطعام",
+    "app_name": "",
+    "start": "إبدأ",
+    "signup": "تسجيل حساب",
+    "login": "مسبقاً تملك حساباً",
+    "next": "التالي",
+    "start_now": "إبدأ الآن",
+    "previous": "السابق"
+  },
+  "tabs": {
+    "home": "الرئيسية",
+    "menu": "القائمة",
+    "search": "الأخبار",
+    "cart": "سلتي",
+    "profile": "حسابي",
+    "news": "الأخبار",
+    "orders_list": "طلباتي"
+  },
+  "products": {
+    "to_cart": "إضافة إلى السلة",
+    "in_cart": "+ 1 إلى السلة",
+    "empty": "لا يوجد منتجات"
+  },
+  "order": {
+    "id": "طلب #{{id}}",
+    "view": "تفاصيل الطلب",
+    "contact_information":"معلومات التواصل",
+    "title": "تفاصيل الطلب",
+    "name": "الاسم",
+    "phone": "الهاتف",
+    "address": "العنوان",
+    "promo_code": "الرمز الترويجي",
+    "click_to_write": "إضفط للكتابة",
+    "optional": "إختياري",
+    "check_promo": "اختبر",
+    "payment_methods": "أساليب الدفع",
+    "cash_on_delivery": "نقداً عند الوصول",
+    "stripe": " Stripe سترايب",
+    "paypal": " Paypal باي بال",
+    "order_value": "قيمة الطلب",
+    "delivery_price": "سعر التوصيل:",
+    "coupon_discount": "خصم الكوبون:",
+    "total": "الإجمالي:",
+    "place_order": "إرسال الطلب",
+    "complete_payment_process": "إتمام الدفع",
+    "promo_not_found": "الرمز الترويجي غير موجود",
+    "promo_invalid": "الرمز الترويجي غير صحيح أو لا يمكن إستخدامه",
+    "general_error": "خطأ عام",
+    "error_title": "خطأ",
+    "success": "تم بنجاح!",
+    "promo_applied": "تم تطبيق الكوبون",
+    "order_placed": "لقد تم إستلام طلبكم بشكلٍ ناجح",
+    "payment_error": "خطأ في معالجة الدفع",
+    "paypal_error": "خطأ في معالجة الدفع عبر باي بال",
+    "tax": "الضريبة",
+    "total_with_tax": "الإجمالي مع الضريبة",
+    "history": "تاريخ الطلبات"
+  },
+  "buttons": {
+    "search": "ابحث",
+    "ok": "حسناً",
+    "cancel": "إلغاء"
+  },
+  "news": {
+    "title": "الأخبار"
+  },
+  "home": {
+    "title": "اختر المنطقة"
+  },
+  "completed": {
+    "title": "شكراً لكم",
+    "order_received_successfully": "تم الطلب بنجاح",
+    "good_news_dear_friend": "أخبار جيدة صديقنا! لقد أخذ طلبكم مكانه في الرتل و يتم تحضريه ليصلكم قريباً",
+    "order_number": "رقم الطلب"
+  },
+  "loading": "يتم تحميل التطبيق، الرجاء الإنتظار",
+  "credit_card": {
+    "number": "رقم البطاقة",
+    "exp_month": "شهر الإنتهاء",
+    "exp_year": "سنة الإنتهاء",
+    "cvc": "CVC",
+    "pay": "إدفع عبر البطاقة",
+    "cancel": "إلغاء"
+  },
+  "catalog": {
+    "title": "المينو"
+  },
+  "cart": {
+    "title": "السلة",
+    "product": "منتج",
+    "products": "منتجات",
+    "empty": "سلتك فارغة",
+    "order": "الطلب",
+    "count": "عدد",
+    "subtotal": "سعر المنتجات",
+    "delivery_price": "سعر التوصيل",
+    "coupon_discount": "خصم الكوبون",
+    "total": "الإجمالي",
+    "continue_to_payment": "إتمام الطلب",
+    "remove_from_cart": "إزالة من السلة",
+    "do_you_want_to_remove_this_product_at_all": "هل أنت متأكد من إزالة هذا المنتج؟",
+    "add_from_other_restaurant_title": "إضافة منتح من مطعم آخر",
+    "add_from_other_restaurant_text": "تقوم بإضافة منتج من معطم آخر. هذا سوف يفرغ سلتك أولاً. الإستمرار؟"
+  },
+  "map": {
+    "cancel": "إلغاء",
+    "select": "إختيار العنوان",
+    "no_service": "لا يوجد خدمة توصيل في هذه المنطقة"
+  },
+  "signup": {
+    "name": "الاسم",
+    "phone": "رقم الهاتف",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة السر",
+    "city": "المدينة",
+    "button": "تسجيل",
+    "login": "تسجيل الدخول بإستخدام حساب مسبق",
+    "error": "خطأ عام قد حدث خلال تسجيل الدخول"
+  },
+  "menu": {
+    "profile": "الحساب",
+    "logout": "تسجيل الخروج",
+    "version": "الإصدار",
+    "powered_by": "مدعوم بواسطة"
+  },
+  "restaurants": {
+    "title": "إختر المطعم"
+  },
+  "profile": {
+    "title": "حسابي",
+    "save": "حفظ",
+    "email": "البريد إلكتروني",
+    "name": "الإسم",
+    "city": "المدينة",
+    "phone": "الهاتف",
+    "password": "كلمة المرور",
+    "password_confirmation": "تأكيد كلمة المرور"
+  },
+  "login": {
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "button": "تسجيل الدخول",
+    "no_account": "تسجيل حساب جديد",
+    "error": "البريد أو كلمة المرور خاطئين"
+  }
+}

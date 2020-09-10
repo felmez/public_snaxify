@@ -1,0 +1,32 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+// Variables
+@import "variables";
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "auxiliary";
+
+@media(min-width: $screen-sm-max) {
+  body {
+    padding-top: 70px;
+  }
+}
+
+.sidenav {
+  .icon {
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+  }
+  .fa {
+    font-size: 150%;
+    margin-right: 10px;
+  }
+}
+
+.tree-item {
+  background: $panel-default-heading-bg;
+  overflow: hidden;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}

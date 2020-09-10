@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar custom-navbar>
+    <ion-title>
+      <span *ngIf="category">{{ category.name }}</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="products-content">
+  <div *ngIf="products.length == 0; else gotProducts" class="middle-center">
+    <div>{{ "products.empty" | translate }} <br /></div>
+  </div>
+
+  <ng-template #gotProducts>
+    <div class="products">
+
+      <!--(click)="open(product)" tappable - propereties deleted koudify  -->
+      <div class="card-item" *ngFor="let product of products" >
+        <div class="card-img" *ngIf="product.images.length > 0"
+          [ngStyle]="{ 'background-image': 'url(' + product.images[0] + ')' }"></div>
+        <div class="card-content" text-wrap>
+          <h2 class="card-title">{{ product.name }}</h2>
+          <!--<time class="card-sub-title" *ngIf="product." [innerHtml]="product."></time>-->
+          <div class="card-text" *ngIf="product.description">
+            <p>{{ product.description | truncate: [25, "..."] }}</p>
+          </div>
+        </div>
+        <div class="card-badge" [innerHtml]="product.price | ecurrency"></div>
+        <div class="count-manipulation">
+          <button ion-button block (click)="addToCart(product)"
+                   
+                  class="call-to-action increase  {{ product.added ? '' : 'removed' }}">+</button>
+                  <!-- <hr class="between-buttons" > -->
+            <!-- <div class="card-badge" *ngIf="product.added">{{cart.item.product.count}}</div> -->
+                  <!-- <div class="flix-box"></div> -->
+					<button class="decrease" *ngIf="product.added" (click)="decreaseCart(product)">-</button>
+
+          <!-- 
+            <div class="count-manipulation">
+						<button class="decrease" (click)="decreaseCart(item)">-</button>
+						<button class="increase" (click)="increaseCart(item)">+</button>
+					</div>
+
+           -->
+        </div>
+      </div>
+
+    </div>
+  </ng-template>
+
+  <!--<div class="product" *ngFor="let product of products">
+		<div *ngIf="product.images.length > 0" class="product-images">
+			<img [src]="product.images[0]" *ngIf="product.images.length == 1">
+			<ion-slides pager *ngIf="product.images.length > 1" [dir]="direction">
+				<ion-slide *ngFor="let image of product.images">
+					<img [src]="image">
+				</ion-slide>
+			</ion-slides>
+		</div>
+		<div padding class="product-info">
+			<h2>{{ product.name }}</h2>
+			<p class="product-descr">{{ product.description }}</p>
+			<div class="product-price">
+				<span *ngIf="product.price_old && (product.price_old > 0)"><s>{{ product.price_old | ecurrency }}</s></span>
+				<span>{{ product.price | ecurrency }}</span>
+			</div>
+			<button ion-button block icon-left (click)="addToCart(product)"
+			        color="{{ product.added ? 'secondary' : 'primary' }}">
+				<ion-icon name='cart'></ion-icon>
+				<span *ngIf="!product.added">{{ 'products.to_cart' | translate }}</span>
+				<span *ngIf="product.added">{{ 'products.in_cart' | translate }}</span>
+			</button>
+			<br>
+			<button ion-button block icon-left (click)="open(product)" color="dark">
+				Open Product Details Page
+			</button>
+			<hr>
+		</div>
+	</div>-->
+</ion-content>

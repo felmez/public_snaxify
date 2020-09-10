@@ -1,0 +1,106 @@
+cart {
+  ion-slides {
+    height: 40vh;
+    width: 100%;
+    margin-top: 20px;
+    ion-slide {
+      margin-top: 17px;
+      height: calc(30vh + 20px) !important;
+      //margin: 17px 17px;
+      padding: 14px 25px;
+      background: $white;
+      box-shadow: 0 11px 25px 0 rgba(0, 0, 0, 0.04);
+      border-radius: 7px;
+      .cart-product-img {
+        background-size: cover;
+        background-position: center;
+        display: block;
+        width: 125px;
+        height: 125px;
+        margin: 0 auto;
+        border-radius: 14px 0;
+      }
+      .cart-product-details {
+        font-weight: bold;
+        line-height: 20px;
+        text-align: right;
+        h2 {
+          font-size: 17px;
+          color: color($colors, dark);
+        }
+        .price {
+          direction: rtl !important;
+          text-align: left;
+          letter-spacing: -0.5px;
+          //float: right;
+        }
+        .count {
+          display: block;
+          width: 100%;
+          direction: rtl !important;
+          color: #bdbdd2;
+          .multiply {
+            float: right;
+          }
+        }
+        .count-manipulation {
+          position: absolute;
+          left: -5px;
+          bottom: 10px;
+          padding: 0;
+          .increase, .decrease {
+            background: color($colors, primary);
+            margin: 0;
+            color: $white;
+            font-size: 28px;
+            font-weight: bold;
+            /*padding-top: 3px;
+            padding-bottom: 3px;*/
+            text-align: center;
+            padding: 0;
+            height: 8vw;
+            width: 8vw;
+          }
+          .increase {
+            border-radius: 7px 0 0 0;
+          }
+          .decrease {
+            border-radius: 0 0 7px 0;
+          }
+        }
+      }
+    }
+  }
+  ion-list {
+    ion-item {
+      h2 {
+        font-size: 15px;
+        font-weight: 600;
+        color: color($colors, light);
+      }
+      ion-note {
+        color: rgba(color($colors, light), .5);
+        //font-size: 12px;
+        //align-self: flex-start;
+        //margin-top: 14px;
+      }
+    }
+  }
+
+  .place-order-button {
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .cart-total {
+    font-weight: bold;
+    padding: 3px 15px;
+    background: #fff;
+    font-size: 16px;
+    border-top: 1px solid lighten($c_color_light, 10%);
+    &.-nob {
+      border: none;
+      padding: 5px 15px;
+    }
+  }
+}

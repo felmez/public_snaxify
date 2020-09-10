@@ -1,0 +1,385 @@
+ion-icon {
+  &[class*="liliom-"] {
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 20px;
+    height: 20px;
+    &:not(.not-flipped) {
+      @include rtl () {
+        transform: scaleX(-1);
+      }
+    }
+    -webkit-transition: all .5s cubic-bezier(.68, 0, .265, 1);
+    -webkit-transition: all .5s cubic-bezier(.68, -.55, .265, 1.55);
+    -moz-transition: all .5s cubic-bezier(.68, -.55, .265, 1.55);
+    -o-transition: all .5s cubic-bezier(.68, -.55, .265, 1.55);
+    transition: all .5s cubic-bezier(.68, -.55, .265, 1.55);
+    -webkit-transition-timing-function: cubic-bezier(.68, 0, .265, 1);
+    -webkit-transition-timing-function: cubic-bezier(.68, -.55, .265, 1.55);
+    -moz-transition-timing-function: cubic-bezier(.68, -.55, .265, 1.55);
+    -o-transition-timing-function: cubic-bezier(.68, -.55, .265, 1.55);
+    transition-timing-function: cubic-bezier(.68, -.55, .265, 1.55);
+  }
+  &[class*="liliom-announcement"] {
+    mask-image: url(../assets/icon/icon-announcement.svg);
+  }
+  &[class*="liliom-archive"] {
+    mask-image: url(../assets/icon/icon-archive.svg);
+  }
+  &[class*="liliom-arrow-down"] {
+    mask-image: url(../assets/icon/icon-arrow-down.svg);
+  }
+  &[class*="liliom-arrow-left"] {
+    mask-image: url(../assets/icon/icon-arrow-left.svg);
+  }
+  &[class*="liliom-arrow-right"] {
+    mask-image: url(../assets/icon/icon-arrow-right.svg);
+  }
+  &[class*="liliom-arrow-up"] {
+    mask-image: url(../assets/icon/icon-arrow-up.svg);
+  }
+  &[class*="liliom-at-symbol"] {
+    mask-image: url(../assets/icon/icon-at-symbol.svg);
+  }
+  &[class*="liliom-book"] {
+    mask-image: url(../assets/icon/icon-book.svg);
+  }
+  &[class*="liliom-bookmark"] {
+    mask-image: url(../assets/icon/icon-bookmark.svg);
+  }
+  &[class*="liliom-briefcase"] {
+    mask-image: url(../assets/icon/icon-briefcase.svg);
+  }
+  &[class*="liliom-browser"] {
+    mask-image: url(../assets/icon/icon-browser.svg);
+  }
+  &[class*="liliom-building"] {
+    mask-image: url(../assets/icon/icon-building.svg);
+  }
+  &[class*="liliom-calander"] {
+    mask-image: url(../assets/icon/icon-calander.svg);
+  }
+  &[class*="liliom-call-incoming"] {
+    mask-image: url(../assets/icon/icon-call-incoming.svg);
+  }
+  &[class*="liliom-call-outgoing"] {
+    mask-image: url(../assets/icon/icon-call-outgoing.svg);
+  }
+  &[class*="liliom-call"] {
+    mask-image: url(../assets/icon/icon-call.svg);
+  }
+  &[class*="liliom-camera"] {
+    mask-image: url(../assets/icon/icon-camera.svg);
+  }
+  &[class*="liliom-cart"] {
+    mask-image: url(../assets/icon/icon-cart.svg);
+  }
+  &[class*="liliom-cash-on-delivery"] {
+    mask-image: url(../assets/icon/icon-cash-on-delivery.svg);
+  }
+  &[class*="liliom-chat"] {
+    mask-image: url(../assets/icon/icon-chat.svg);
+  }
+  &[class*="liliom-check-circle"] {
+    mask-image: url(../assets/icon/icon-check-circle.svg);
+  }
+  &[class*="liliom-cheveron-down"] {
+    mask-image: url(../assets/icon/icon-cheveron-down.svg);
+  }
+  &[class*="liliom-cheveron-left"] {
+    mask-image: url(../assets/icon/icon-cheveron-left.svg);
+  }
+  &[class*="liliom-cheveron-right"] {
+    mask-image: url(../assets/icon/icon-cheveron-right.svg);
+  }
+  &[class*="liliom-cheveron-up"] {
+    mask-image: url(../assets/icon/icon-cheveron-up.svg);
+  }
+  &[class*="liliom-clip"] {
+    mask-image: url(../assets/icon/icon-clip.svg);
+  }
+  &[class*="liliom-clipboard"] {
+    mask-image: url(../assets/icon/icon-clipboard.svg);
+  }
+  &[class*="liliom-clock"] {
+    mask-image: url(../assets/icon/icon-clock.svg);
+  }
+  &[class*="liliom-code"] {
+    mask-image: url(../assets/icon/icon-code.svg);
+  }
+  &[class*="liliom-cog"] {
+    mask-image: url(../assets/icon/icon-cog.svg);
+  }
+  &[class*="liliom-comment"] {
+    mask-image: url(../assets/icon/icon-comment.svg);
+  }
+  &[class*="liliom-compass"] {
+    mask-image: url(../assets/icon/icon-compass.svg);
+  }
+  &[class*="liliom-currency-dollar"] {
+    mask-image: url(../assets/icon/icon-currency-dollar.svg);
+  }
+  &[class*="liliom-dashboard"] {
+    mask-image: url(../assets/icon/icon-dashboard.svg);
+  }
+  &[class*="liliom-desktop"] {
+    mask-image: url(../assets/icon/icon-desktop.svg);
+  }
+  &[class*="liliom-discount"] {
+    mask-image: url(../assets/icon/icon-discount.svg);
+  }
+  &[class*="liliom-download"] {
+    mask-image: url(../assets/icon/icon-download.svg);
+  }
+  &[class*="liliom-duplicate"] {
+    mask-image: url(../assets/icon/icon-duplicate.svg);
+  }
+  &[class*="liliom-edit"] {
+    mask-image: url(../assets/icon/icon-edit.svg);
+  }
+  &[class*="liliom-emotion-happy"] {
+    mask-image: url(../assets/icon/icon-emotion-happy.svg);
+  }
+  &[class*="liliom-emotion-sad"] {
+    mask-image: url(../assets/icon/icon-emotion-sad.svg);
+  }
+  &[class*="liliom-exclamation"] {
+    mask-image: url(../assets/icon/icon-exclamation.svg);
+  }
+  &[class*="liliom-external-link"] {
+    mask-image: url(../assets/icon/icon-external-link.svg);
+  }
+  &[class*="liliom-file-blank"] {
+    mask-image: url(../assets/icon/icon-file-blank.svg);
+  }
+  &[class*="liliom-file-minus"] {
+    mask-image: url(../assets/icon/icon-file-minus.svg);
+  }
+  &[class*="liliom-file-plus"] {
+    mask-image: url(../assets/icon/icon-file-plus.svg);
+  }
+  &[class*="liliom-file"] {
+    mask-image: url(../assets/icon/icon-file.svg);
+  }
+  &[class*="liliom-film"] {
+    mask-image: url(../assets/icon/icon-film.svg);
+  }
+  &[class*="liliom-filter"] {
+    mask-image: url(../assets/icon/icon-filter.svg);
+  }
+  &[class*="liliom-flag"] {
+    mask-image: url(../assets/icon/icon-flag.svg);
+  }
+  &[class*="liliom-folder-minus"] {
+    mask-image: url(../assets/icon/icon-folder-minus.svg);
+  }
+  &[class*="liliom-folder-plus"] {
+    mask-image: url(../assets/icon/icon-folder-plus.svg);
+  }
+  &[class*="liliom-folder"] {
+    mask-image: url(../assets/icon/icon-folder.svg);
+  }
+  &[class*="liliom-globe"] {
+    mask-image: url(../assets/icon/icon-globe.svg);
+  }
+  &[class*="liliom-graph-bar"] {
+    mask-image: url(../assets/icon/icon-graph-bar.svg);
+  }
+  &[class*="liliom-grid"] {
+    mask-image: url(../assets/icon/icon-grid.svg);
+  }
+  &[class*="liliom-group"] {
+    mask-image: url(../assets/icon/icon-group.svg);
+  }
+  &[class*="liliom-hashtag"] {
+    mask-image: url(../assets/icon/icon-hashtag.svg);
+  }
+  &[class*="liliom-heart"] {
+    mask-image: url(../assets/icon/icon-heart.svg);
+  }
+  &[class*="liliom-help"] {
+    mask-image: url(../assets/icon/icon-help.svg);
+  }
+  &[class*="liliom-home"] {
+    mask-image: url(../assets/icon/icon-home.svg);
+  }
+  &[class*="liliom-image"] {
+    mask-image: url(../assets/icon/icon-image.svg);
+  }
+  &[class*="liliom-inbox"] {
+    mask-image: url(../assets/icon/icon-inbox.svg);
+  }
+  &[class*="liliom-information"] {
+    mask-image: url(../assets/icon/icon-information.svg);
+  }
+  &[class*="liliom-key"] {
+    mask-image: url(../assets/icon/icon-key.svg);
+  }
+  &[class*="liliom-link"] {
+    mask-image: url(../assets/icon/icon-link.svg);
+  }
+  &[class*="liliom-location"] {
+    mask-image: url(../assets/icon/icon-location.svg);
+  }
+  &[class*="liliom-lock-closed"] {
+    mask-image: url(../assets/icon/icon-lock-closed.svg);
+  }
+  &[class*="liliom-lock-open"] {
+    mask-image: url(../assets/icon/icon-lock-open.svg);
+  }
+  &[class*="liliom-mail"] {
+    mask-image: url(../assets/icon/icon-mail.svg);
+  }
+  &[class*="liliom-map"] {
+    mask-image: url(../assets/icon/icon-map.svg);
+  }
+  &[class*="liliom-menu"] {
+    mask-image: url(../assets/icon/icon-menu.svg);
+  }
+  &[class*="liliom-menu2"] {
+    mask-image: url(../assets/icon/icon-menu2.svg);
+  }
+  &[class*="liliom-microphone"] {
+    mask-image: url(../assets/icon/icon-microphone.svg);
+  }
+  &[class*="liliom-minus-circle"] {
+    mask-image: url(../assets/icon/icon-minus-circle.svg);
+  }
+  &[class*="liliom-minus-square"] {
+    mask-image: url(../assets/icon/icon-minus-square.svg);
+  }
+  &[class*="liliom-minus"] {
+    mask-image: url(../assets/icon/icon-minus.svg);
+  }
+  &[class*="liliom-mobile"] {
+    mask-image: url(../assets/icon/icon-mobile.svg);
+  }
+  &[class*="liliom-moon"] {
+    mask-image: url(../assets/icon/icon-moon.svg);
+  }
+  &[class*="liliom-more-horiz"] {
+    mask-image: url(../assets/icon/icon-more-horiz.svg);
+  }
+  &[class*="liliom-music"] {
+    mask-image: url(../assets/icon/icon-music.svg);
+  }
+  &[class*="liliom-news"] {
+    mask-image: url(../assets/icon/icon-news.svg);
+  }
+  &[class*="liliom-notification"] {
+    mask-image: url(../assets/icon/icon-notification.svg);
+  }
+  &[class*="liliom-paypal1"] {
+    mask-image: url(../assets/icon/icon-paypal1.svg);
+  }
+  &[class*="liliom-paypal2"] {
+    mask-image: url(../assets/icon/icon-paypal2.svg);
+  }
+  &[class*="liliom-plus-circle"] {
+    mask-image: url(../assets/icon/icon-plus-circle.svg);
+  }
+  &[class*="liliom-plus-square"] {
+    mask-image: url(../assets/icon/icon-plus-square.svg);
+  }
+  &[class*="liliom-plus"] {
+    mask-image: url(../assets/icon/icon-plus.svg);
+  }
+  &[class*="liliom-print"] {
+    mask-image: url(../assets/icon/icon-print.svg);
+  }
+  &[class*="liliom-puzzle"] {
+    mask-image: url(../assets/icon/icon-puzzle.svg);
+  }
+  &[class*="liliom-refresh"] {
+    mask-image: url(../assets/icon/icon-refresh.svg);
+  }
+  &[class*="liliom-repeat"] {
+    mask-image: url(../assets/icon/icon-repeat.svg);
+  }
+  &[class*="liliom-rocket"] {
+    mask-image: url(../assets/icon/icon-rocket.svg);
+  }
+  &[class*="liliom-search"] {
+    mask-image: url(../assets/icon/icon-search.svg);
+  }
+  &[class*="liliom-server"] {
+    mask-image: url(../assets/icon/icon-server.svg);
+  }
+  &[class*="liliom-speaker"] {
+    mask-image: url(../assets/icon/icon-speaker.svg);
+  }
+  &[class*="liliom-star"] {
+    mask-image: url(../assets/icon/icon-star.svg);
+  }
+  &[class*="liliom-store"] {
+    mask-image: url(../assets/icon/icon-store.svg);
+  }
+  &[class*="liliom-stripe"] {
+    mask-image: url(../assets/icon/icon-stripe.svg);
+  }
+  &[class*="liliom-tablet"] {
+    mask-image: url(../assets/icon/icon-tablet.svg);
+  }
+  &[class*="liliom-tag"] {
+    mask-image: url(../assets/icon/icon-tag.svg);
+  }
+  &[class*="liliom-thumb-down"] {
+    mask-image: url(../assets/icon/icon-thumb-down.svg);
+  }
+  &[class*="liliom-thumb-up"] {
+    mask-image: url(../assets/icon/icon-thumb-up.svg);
+  }
+  &[class*="liliom-trash"] {
+    mask-image: url(../assets/icon/icon-trash.svg);
+  }
+  &[class*="liliom-trending-down"] {
+    mask-image: url(../assets/icon/icon-trending-down.svg);
+  }
+  &[class*="liliom-trending-up"] {
+    mask-image: url(../assets/icon/icon-trending-up.svg);
+  }
+  &[class*="liliom-trophy"] {
+    mask-image: url(../assets/icon/icon-trophy.svg);
+  }
+  &[class*="liliom-upload"] {
+    mask-image: url(../assets/icon/icon-upload.svg);
+  }
+  &[class*="liliom-user-check"] {
+    mask-image: url(../assets/icon/icon-user-check.svg);
+  }
+  &[class*="liliom-user-minus"] {
+    mask-image: url(../assets/icon/icon-user-minus.svg);
+  }
+  &[class*="liliom-user-plus"] {
+    mask-image: url(../assets/icon/icon-user-plus.svg);
+  }
+  &[class*="liliom-user"] {
+    mask-image: url(../assets/icon/icon-user.svg);
+  }
+  &[class*="liliom-video"] {
+    mask-image: url(../assets/icon/icon-video.svg);
+  }
+  &[class*="liliom-view"] {
+    mask-image: url(../assets/icon/icon-view.svg);
+  }
+  &[class*="liliom-x-circle"] {
+    mask-image: url(../assets/icon/icon-x-circle.svg);
+  }
+  &[class*="liliom-x-square"] {
+    mask-image: url(../assets/icon/icon-x-square.svg);
+  }
+  &[class*="liliom-x"] {
+    mask-image: url(../assets/icon/icon-x.svg);
+  }
+  &[class*="liliom-zoom-in"] {
+    mask-image: url(../assets/icon/icon-zoom-in.svg);
+  }
+  &[class*="liliom-zoom-out"] {
+    mask-image: url(../assets/icon/icon-zoom-out.svg);
+  }
+}
